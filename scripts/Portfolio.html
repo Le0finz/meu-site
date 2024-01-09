@@ -5,49 +5,254 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ff9a0a8d1c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="./images/logo.png" class="logo" alt="">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <img src="./images/Logo Leo.png" class="logo" alt="">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Game Developer</p>
-            <h1>Olá, eu sou <span>Leo</span><br>um desenvolvedor de jogos</h1>
+            <h1>Olá, eu sou <span>Alex</span><br>desenvolvedore de jogos</h1>
         </div>
     </div>
 </div>
 
-<!-- -------------about-------------- -->
+<!-- -------------sobreMim-------------- -->
 
 <div id="about">
     <div class="container">
         <div class="row">
             <div class ="about-col-1">
-                <img src="./images/user.png" alt="">
+                <img src="./images/foto site.png" alt="">
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos reiciendis impedit excepturi dolores magnam, eum inventore a? 
-                Nisi recusandae nostrum quae! Perspiciatis nostrum magnam sint voluptatibus excepturi consequuntur voluptate dolorem.</p>
-                            
-                <div class="tab-titles">
-                <p class="tab-links">Skills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
-            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre Mim</h1>
+                    <p>Eu sempre fui apaixonada por jogos, jogo desde pequena mas passei a me interessar no desenvolvimento e no processo em meados de 2021. Não existiam muitos cursos ou faculdades
+                        sobre o assunto no local de minha residência, foi aí que decidi a estudar independentemente todos os processos que levam a criação de um jogo, meu atual objetivo é ser um Ás no desenvolvimento
+                        de jogos, por isso decidi enfrentar o desafio de todas as áreas presentes durante a produção de um jogo. Muito do meu aprendizado vêm da prática, eu adoro participar de game jams e geralmente busco trabalhar na música ou arte de um jogo
+                        
+                    </p>
+                                
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experiência</p>
+                    <p class="tab-links" onclick="opentab('education')">Educação</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programação</span><br>GDScript//C#</li>
+                        <li><span>Música</span><br>Composição e Gravação</li>
+                        <li><span>Arte</span><br>Arte conceitual/Sprites</li>
+                        <li><span>Game Design</span><br>Planejamento de Gameplay e Mecânicas</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>GDParty game jam - Ansídio</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Faculdade Descomplica - Jogos Digitais</li>
+                        <li><span>2016</span><br>Ilac institute - Customized Teen English Program - Inglês avançado</li>
+                        <li><span>2020</span><br>Curso Som Brasil - Violino e Canto</li>
+                        <li><span>2020</span><br>Musescore - Mixagem e Criação de Lo-Fi</li>
+                        <li><span>2021</span><br>Domestika - Photoshop para ilustrações / Design de Personagens</li>
+                        <li><span>2023</span><br>Autodidata -  Modelagem 3D (Blender)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- -------------serviços-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Meus serviços</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-regular fa-envelope"></i>
+                <h2>FreeLance/Comissões</h2>
+                <p>Não precisa de muito? fique tranquilo que eu também faço comissões de ilustração e produção musical, mas fique atento as vagas são limitadas!</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+            <!-- <div>
+                <i class="fa-solid fa-store"></i>
+                <h2>Loja Online</h2>
+                <p>Você pode comprar assets pré prontos na minha loja digital, eles servem como uma ótima base caso você tenha dificuldades com algum estágio do desenvolvimento, seja um modelo 3D, Script ou sprites</p>
+                <a href="#">Saiba Mais</a>
+            </div> -->
+            <div>
+                <i class="fa-solid fa-suitcase"></i>
+                <h2>Tempo Integral</h2>
+                <p>Também forneço serviços de contrato em tempo Integral nas áreas de ilustração, produção musical, design de level e roteiro!</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Meus Trabalhos</h1>
+        <h2 class="sub-title">Arte 2D</h2>
+        <div class="worklist">
+            <div class="work">
+                <div class="work">
+                    <img src="./images/mateus finalmente bonito.png" alt="">
+                    <div class="layer">
+                        <h3>Projeto1</h3>
+                        <p>isso aqui é um texto de exemplo</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="work">
+                <div class="work">
+                    <img src="./images/Me3.png" alt="">
+                    <div class="layer">
+                        <h3>Projeto2</h3>
+                        <p>isso aqui é um texto de exemplo</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <img src="./images/aranha.png" alt="">
+                    <div class="layer">
+                        <h3>Projeto3</h3>
+                        <p>isso aqui é um texto de exemplo</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <img src="./images/Album.png" alt="">
+                    <div class="layer">
+                        <h3>Projeto3</h3>
+                        <p>isso aqui é um texto de exemplo</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <br>
+            <h2 class="sub-title">Arte 3D</h2>
+            <div class="worklist">
+            <div class="work">
+                <div class="work">
+                    <video width="200" height="260" controls loop>
+                        <source src="./images/Donut.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <video width="300" height="300" controls loop>
+                        <source src="./images/Potions.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <video width="300" height="300" controls loop>
+                        <source src="./images/sword.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <video width="300" height="300" controls loop>
+                        <source src="./images/terreno0001-0236.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+            <br>
+            <h2 class="sub-title">Ouça minhas músicas</h2>
+            <a href="https://soundcloud.com/alex-956577491" target="_blank" class="btn">SoundCloud</a>
+            <h2 class="sub-title">Jogos</h2>
+                <div class="games">
+                <a href="https://lenrri.itch.io/ansidio" target="_blank"> <img src="./images/TelaInicial.png" alt="" width="480px" height="270px"></a>
+                </div>
+          
+
+        </div>
+       
+               
+
+    </div>
+</div>
+<!-- -------------contato-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Fale Comigo</h1>
+                <p><i class="fa-regular fa-envelope"></i>inartlex@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+55 21 971144432</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/LeoMiranda"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5521971144432"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="./images/CV Leonardo (1).pdf" download class="btn btn2">Currículo</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Alex Silva</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+  
+
 
 </body>
 </html>
